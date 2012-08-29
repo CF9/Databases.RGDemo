@@ -2,5 +2,5 @@ Databases.RGDemo
 ================
 
 Red Gate Database for SQL in the City presentation
-Testing Git password caching again 1131am
 
+This is going to be an awesome presentation!
