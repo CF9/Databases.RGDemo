@@ -6,8 +6,7 @@ CREATE TABLE [dbo].[Customer]
 [IsActive_FL] [bit] NOT NULL CONSTRAINT [DF_Customer_IsActive_FL] DEFAULT ((1)),
 [Create_DT] [datetime] NOT NULL CONSTRAINT [DF_Customer_Create_DT] DEFAULT (getutcdate()),
 [Update_DT] [datetime] NULL,
-[Terminate_DT] [datetime] NULL,
-[MyColumn] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+[Terminate_DT] [datetime] NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Customer] ADD CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED  ([Customer_ID]) ON [PRIMARY]
