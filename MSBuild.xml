@@ -58,12 +58,12 @@
 		<Message Text="==" />
 		
 		<Message Text="== Updating Schema" />
-		<Exec Command="&quot;$(RGSqlComparePath)&quot; /scr1 RedGateScripts /s2 localhost /db2 $(SqlCIDb) /Include Assembly /Include Function /Include StoredProcedure /Include Table /Include View /Include UserDefinedType /Include Contract /Include MessageType /Include Queue /Include Service /Include Additional /Include Different /Include Missing /Include Identical /sf UpdateSchema_JenkinsCI.sql /force /sync" />
+		<Exec Command="&quot;$(RGSqlComparePath)&quot; /scr1 RedGateScripts /s2 localhost /db2 $(SqlCIDb) /Include Assembly /Include Function /Include StoredProcedure /Include Table /Include View /Include UserDefinedType /Include Contract /Include MessageType /Include Queue /Include Service /Include Additional /Include Different /Include Missing /Include Identical /sf UpdateSchema_JenkinsCI.SQLCompare.sql /force /sync" />
 		<Message Text="== Done" />
 		<Message Text="==" />
 		
 		<Message Text="== Updating Data (this may take a while)" />
-		<Exec Command="&quot;$(RGSqlDataComparePath)&quot; /scr1 RedGateScripts /s2 localhost /db2 $(SqlCIDb) /Include Additional /Include Different /Include Missing /Include Identical /sf UpdateData_JenkinsCI.sql /force /sync" />
+		<Exec Command="&quot;$(RGSqlDataComparePath)&quot; /scr1 RedGateScripts /s2 localhost /db2 $(SqlCIDb) /Include Additional /Include Different /Include Missing /Include Identical /sf UpdateData_JenkinsCI.SQLDataCompare.sql /force /sync" />
 		<Message Text="== Done" />
 		<Message Text="==" />
 		
