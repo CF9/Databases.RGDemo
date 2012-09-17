@@ -7,7 +7,7 @@
 	<include>Different</include>
 	<include>Missing</include>
 	<include>Identical</include>
-	<scriptfile>UpdateData_RGDemo_DEV.sql</scriptfile>
+	<scriptfile>UpdateData_RGDemo_DEV.SQLDataCompare.sql</scriptfile>
 	<force/>
 	<sync/>
 </commandline>

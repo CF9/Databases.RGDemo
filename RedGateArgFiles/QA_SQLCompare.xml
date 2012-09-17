@@ -31,7 +31,7 @@
 	<options>IgnoreNotForReplication</options>
 	<options>IgnoreQuotedIdentifiersAndAnsiNullSettings</options>
 	<options>IgnoreUsersPermissionsAndRoleMemberships</options>
-	<scriptfile>UpdateSchema_RGDemo_QA.sql</scriptfile>
+	<scriptfile>UpdateSchema_RGDemo_QA.SQLCompare.sql</scriptfile>
 	<force/>
 	<sync/>
 </commandline>
