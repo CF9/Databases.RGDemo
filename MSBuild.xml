@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<RGSqlComparePath>C:\Program Files (x86)\Red Gate\SQL Compare 10\SQLCompare.exe</RGSqlComparePath>
+		<RGSqlDataComparePath>C:\Program Files (x86)\Red Gate\SQL Data Compare 10\SQLDataCompare.exe</RGSqlDataComparePath>
+		<SqlCmdPath>C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe</SqlCmdPath>
+		<SqlCIDb>RGDemo_CI</SqlCIDb>
+	</PropertyGroup>
+
+	<Import
+		Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"
+		Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')"
+	/>
+
+	<Target Name="UpdateDatabaseVersion"
+		Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')"
+		>
+		<Message Text="==================================================" />
+		<Message Text="== Update Database Version: $(DatabaseVersion)" />
+		<Message Text="==" />
+
+		<FileUpdate 
+			Files="RedGateScripts/Functions/dbo.DATABASE_VERSION.sql" 
+			Regex="RETURN.*'.*'" 
+			ReplacementText="RETURN	'$(DatabaseVersion)'" />
+
+		<Message Text="==================================================" />
+	</Target>
+
+	<Target Name="DeployEnvironment">
+		<Message Text="==================================================" />
+		<Message Text="== Deploy to $(DestinationEnvironment)" />
+		<Message Text="==" />
+
+		<Message Text="== Synching Schema" />
+		<Exec Command="&quot;$(RGSqlComparePath)&quot; /argfile RedGateArgFiles\$(DestinationEnvironment)_SQLCompare.xml" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+
+		<Message Text="== Synching Data" />
+		<Exec Command="&quot;$(RGSqlDataComparePath)&quot; /argfile RedGateArgFiles\$(DestinationEnvironment)_SQLDataCompare.xml" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+		
+		<Message Text="==================================================" />
+	</Target>
+	
+	<Target Name="DeployCI">
+		<Message Text="==================================================" />
+		<Message Text="== Deploy to CI Environment (used by Jenkins to confirm build)" />
+		<Message Text="==" />
+		<Message Text="==" />
+
+		<Message Text="== Creating Continuous Integration database" />
+		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/CreateDatabase.sql -S localhost -d master -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -E" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+		
+		<Message Text="== Updating Schema" />
+		<Exec Command="&quot;$(RGSqlComparePath)&quot; /scr1 RedGateScripts /s2 localhost /db2 $(SqlCIDb) /Include Assembly /Include Function /Include StoredProcedure /Include Table /Include View /Include UserDefinedType /Include Contract /Include MessageType /Include Queue /Include Service /Include Additional /Include Different /Include Missing /Include Identical /sf UpdateSchema_JenkinsCI.sql /force /sync" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+		
+		<Message Text="== Updating Data (this may take a while)" />
+		<Exec Command="&quot;$(RGSqlDataComparePath)&quot; /scr1 RedGateScripts /s2 localhost /db2 $(SqlCIDb) /Include Additional /Include Different /Include Missing /Include Identical /sf UpdateData_JenkinsCI.sql /force /sync" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+		
+		<Message Text="== Dropping Continuous Integration database" />
+		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/DropDatabase.sql -S localhost -d master -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -E" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+
+		<Message Text="==" />
+		<Message Text="==================================================" />
+	</Target>
+
+</Project>
