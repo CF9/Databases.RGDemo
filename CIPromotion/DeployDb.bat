@@ -15,7 +15,7 @@
 
 PROMPT %DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2% $t$g
 @ECHO ON
-C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe C:\JenkinsPublisher\%2\%1\%3\MSBuild.xml /t:DeployEnvironment /property:DestinationEnvironment="%2"
+C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe C:\JenkinsPublisher\%2\%1\MSBuild.xml /t:DeployEnvironment /property:DestinationEnvironment="%2"
 RMDIR C:\JenkinsPublisher\%2\%1 /s /q
 @ECHO OFF
 PROMPT $p$g

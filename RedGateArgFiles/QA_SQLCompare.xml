@@ -27,7 +27,6 @@
 	<exclude>UserDefinedType:\[tSQLt\]</exclude> 
 	<options>IgnoreFillFactor</options>
 	<options>IgnoreStatisticsNorecompute</options>
-	<options>IgnoreConstraintNames</options>
 	<options>IgnoreNotForReplication</options>
 	<options>IgnoreQuotedIdentifiersAndAnsiNullSettings</options>
 	<options>IgnoreUsersPermissionsAndRoleMemberships</options>
