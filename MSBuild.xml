@@ -44,7 +44,7 @@
 		
 		<Message Text="==================================================" />
 	</Target>
-	
+
 	<Target Name="DeployCI">
 		<Message Text="==================================================" />
 		<Message Text="== Deploy to CI Environment (used by Jenkins to confirm build)" />
@@ -52,7 +52,7 @@
 		<Message Text="==" />
 
 		<Message Text="== Creating Continuous Integration database" />
-		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/CreateDatabase.sql -S localhost -d master -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -E" />
+		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/CreateDatabase.sql -S localhost -d master -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -b -E" />
 		<Message Text="== Done" />
 		<Message Text="==" />
 		
@@ -66,8 +66,18 @@
 		<Message Text="== Done" />
 		<Message Text="==" />
 		
+		<Message Text="== Run Tests" />
+		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/RunTests.sql -S localhost -d $(SqlCIDb) -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -b -E" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+
+		<Message Text="== Get Test Results" />
+		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/GetTestResults.sql -S localhost -d $(SqlCIDb) -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -b -o TestResults.tSQLtResults.xml -E" />
+		<Message Text="== Done" />
+		<Message Text="==" />
+
 		<Message Text="== Dropping Continuous Integration database" />
-		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/DropDatabase.sql -S localhost -d master -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -E" />
+		<Exec Command="&quot;$(SqlCmdPath)&quot; -i CIScripts/DropDatabase.sql -S localhost -d master -v DATABASE_NAME=&quot;$(SqlCIDb)&quot; -b -E" />
 		<Message Text="== Done" />
 		<Message Text="==" />
 

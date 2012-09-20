@@ -1,10 +1,16 @@
 #################
-## Eclipse
+## Red Gate Files
 #################
 
 *.sdcs
 *.SQLCompare.sql
 *.SQLDataCompare.sql
+*.tSQLtResults.xml
+
+#################
+## Eclipse
+#################
+
 *.pydevproject
 .project
 .metadata
