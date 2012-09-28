@@ -1,3 +1,4 @@
+
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
@@ -7,6 +8,26 @@ CREATE
 VIEW
 	dbo.OrderSummary
 AS
+/*
+--------------------------------------------------
+Name:		dbo.OrderSummary
+Created:	2012.09.27
+Author:		Ernest Hwang
+--------------------------------------------------
+
+
+	--------------------------------------------------
+	-- Get a few rows from the view
+	--------------------------------------------------
+	SELECT
+		TOP 100
+		*
+	FROM
+		dbo.OrderSummary
+
+
+
+*/
 	SELECT
 		c.Customer_ID
 	,	c.Customer_CD
@@ -14,8 +35,8 @@ AS
 	,	o.Order_ID
 	,	o.Order_CD
 	,	COUNT(1)		AS	TotalLineItems_NB
-	,	SUM(od.Units_AT)	AS	TotalUnits_AT
-	,	SUM(od.Units_AT * od.UnitPrice_AT)
+	,	SUM(od.Unit_AT)	AS	TotalUnits_AT
+	,	SUM(od.Unit_AT * od.UnitPrice_AT)
 					AS	TotalPrice_AT
 	FROM	dbo.Customer		c	WITH (NOLOCK)
 	JOIN	dbo.[Order]		o	WITH (NOLOCK)
