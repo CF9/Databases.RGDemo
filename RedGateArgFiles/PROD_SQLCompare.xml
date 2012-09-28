@@ -17,14 +17,15 @@
 	<include>Different</include>
 	<include>Missing</include>
 	<include>Identical</include>
-	<exclude>schema</exclude> 
-	<exclude>Table:\[tSQLt\]</exclude> 
-	<exclude>StoredProcedure:\[tSQLt\]</exclude> 
-	<exclude>StoredProcedure:\[SQLCop\]</exclude> 
-	<exclude>View:\[tSQLt\]</exclude> 
-	<exclude>Function:\[tSQLt\]</exclude> 
-	<exclude>Assembly:\[tSQLtCLR\]</exclude> 
-	<exclude>UserDefinedType:\[tSQLt\]</exclude> 
+	<exclude>schema</exclude>
+	<exclude>Table:\[tSQLt\]</exclude>
+	<exclude>StoredProcedure:\[SQLCop\]</exclude>
+	<exclude>StoredProcedure:\[Test\]</exclude>
+	<exclude>StoredProcedure:\[tSQLt\]</exclude>
+	<exclude>View:\[tSQLt\]</exclude>
+	<exclude>Function:\[tSQLt\]</exclude>
+	<exclude>Assembly:\[tSQLtCLR\]</exclude>
+	<exclude>UserDefinedType:\[tSQLt\]</exclude>
 	<options>IgnoreFillFactor</options>
 	<options>IgnoreStatisticsNorecompute</options>
 	<options>IgnoreConstraintNames</options>
