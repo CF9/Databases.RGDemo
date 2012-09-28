@@ -21,6 +21,6 @@ Purpose:	Just for kicks!
 
 */
 BEGIN
-	PRINT 'hello world'
+	PRINT 'Hello World!'
 END
 GO
