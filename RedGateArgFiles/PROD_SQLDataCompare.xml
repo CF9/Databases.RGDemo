@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<commandline>
+	<scripts1>RedGateScripts</scripts1>
+	<server2>localhost</server2>
+	<database2>RGDemo_PROD</database2>
+	<include>Additional</include>
+	<include>Different</include>
+	<include>Missing</include>
+	<include>Identical</include>
+	<scriptfile>UpdateData_RGDemo_PROD.SQLDataCompare.sql</scriptfile>
+	<force/>
+<!--
+	<sync/>
+-->
+</commandline>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<commandline>
+	<scripts1>RedGateScripts</scripts1>
+	<server2>localhost</server2>
+	<database2>RGDemo_PROD</database2>
+	<include>Assembly</include>
+	<include>Function</include>
+	<include>StoredProcedure</include>
+	<include>Table</include>
+	<include>View</include>
+	<include>UserDefinedType</include>
+	<include>Contract</include>
+	<include>MessageType</include>
+	<include>Queue</include>
+	<include>Service</include>
+	<include>Additional</include>
+	<include>Different</include>
+	<include>Missing</include>
+	<include>Identical</include>
+	<exclude>schema</exclude> 
+	<exclude>Table:\[tSQLt\]</exclude> 
+	<exclude>StoredProcedure:\[tSQLt\]</exclude> 
+	<exclude>StoredProcedure:\[SQLCop\]</exclude> 
+	<exclude>View:\[tSQLt\]</exclude> 
+	<exclude>Function:\[tSQLt\]</exclude> 
+	<exclude>Assembly:\[tSQLtCLR\]</exclude> 
+	<exclude>UserDefinedType:\[tSQLt\]</exclude> 
+	<options>IgnoreFillFactor</options>
+	<options>IgnoreStatisticsNorecompute</options>
+	<options>IgnoreConstraintNames</options>
+	<options>IgnoreNotForReplication</options>
+	<options>IgnoreQuotedIdentifiersAndAnsiNullSettings</options>
+	<options>IgnoreUsersPermissionsAndRoleMemberships</options>
+	<scriptfile>UpdateSchema_RGDemo_PROD.SQLCompare.sql</scriptfile>
+	<force/>
+<!--
+	<sync/>
+-->
+</commandline>
