@@ -16,9 +16,6 @@ History:
 ==================================================
 */
 
---:setvar DATABASE_NAME "RGDemo_CI"
-:setvar SQLSERVER_PATH "C:\\Program Files\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\DATA\\"
-
 USE [$(DATABASE_NAME)]
 GO
 
