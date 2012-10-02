@@ -21,6 +21,6 @@ Purpose:	Just for kicks!
 
 */
 BEGIN
-	PRINT 'Hello World, and welcome to my super duper presentation!!!'
+	PRINT 'Hello Red Gate Audience!'
 END
 GO
