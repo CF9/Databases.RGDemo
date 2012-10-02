@@ -68,7 +68,6 @@ History:
 
 	RETURN ISNUMERIC(@TextValue)
 
-*/
 	DECLARE	@returnValue	INT
 	
 	IF CHARINDEX('E', UPPER(@TextValue))<> 0
@@ -80,7 +79,12 @@ History:
 		-- Otherwise do a modified IsNumeric test by adding 'E0' at the end
 		SET @returnValue = IsNumeric(@TextValue + 'E0')
 
+
 	RETURN @returnValue
+*/
+
+	RETURN ISNUMERIC(@TextValue)
+
 END
 
 
