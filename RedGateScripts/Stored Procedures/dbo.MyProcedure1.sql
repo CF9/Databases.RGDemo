@@ -21,6 +21,6 @@ Purpose:	Just for kicks!
 
 */
 BEGIN
-	PRINT 'Hello Red Gate Audience!  Remember to tip your wait staff!'
+	PRINT 'Hello, World!'
 END
 GO
