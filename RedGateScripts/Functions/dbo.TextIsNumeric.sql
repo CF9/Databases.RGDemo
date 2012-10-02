@@ -57,16 +57,18 @@ History:
 		SET @returnValue = IsNumeric(@TextValue)
 	END
 	ELSE
+	BEGIN
 		-- Otherwise do a modified IsNumeric test by adding 'E0' at the end
 		SET @returnValue = IsNumeric(@TextValue + 'E0')
-
-	RETURN @returnValue
+	END
 
 	--------------------------------------------------
 	-- The built in ISNUMERIC function DOESN'T work
 	--------------------------------------------------
 
 	RETURN ISNUMERIC(@TextValue)
+
+*/
 
 	DECLARE	@returnValue	INT
 	
@@ -76,14 +78,12 @@ History:
 		SET @returnValue = IsNumeric(@TextValue)
 	END
 	ELSE
+	BEGIN
 		-- Otherwise do a modified IsNumeric test by adding 'E0' at the end
 		SET @returnValue = IsNumeric(@TextValue + 'E0')
-
+	END
 
 	RETURN @returnValue
-*/
-
-	RETURN ISNUMERIC(@TextValue)
 
 END
 
