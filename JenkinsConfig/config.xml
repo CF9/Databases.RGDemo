@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Database build and archive for Red Gate SQL in the City event</description>
+  <description>Database build and archive for Red Gate SQL in the City event (why isn't this showing up in GitHub?)</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.promoted__builds.JobPropertyImpl plugin="promoted-builds@2.7">
