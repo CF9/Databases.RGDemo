@@ -9,6 +9,8 @@ CREATE TABLE [dbo].[Item]
 [Update_DT] [datetime] NULL,
 [Terminate_DT] [datetime] NULL
 ) ON [PRIMARY]
+ALTER TABLE [dbo].[Item] ADD
+CONSTRAINT [FK_Item_ItemType] FOREIGN KEY ([ItemType_ID]) REFERENCES [dbo].[ItemType] ([ItemType_ID])
 GO
 ALTER TABLE [dbo].[Item] ADD CONSTRAINT [PK_Item] PRIMARY KEY CLUSTERED  ([Item_ID]) ON [PRIMARY]
 GO
