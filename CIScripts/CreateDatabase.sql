@@ -18,7 +18,8 @@ History:
 */
 
 --:setvar DATABASE_NAME "PracticeFusion_CI"
-:setvar SQLSERVER_PATH "C:\\Program Files\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\DATA\\"
+--:setvar SQLSERVER_PATH "C:\\Program Files\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\DATA\\"
+:setvar SQLSERVER_PATH "C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\"
 
 
 -- Drop the database if it exists
