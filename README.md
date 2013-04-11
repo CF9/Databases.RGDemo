@@ -1,7 +1,8 @@
 Databases.RGDemo
 ================
 
-Red Gate Database for SQL in the City and [Bay Area Meetup](http://bit.ly/13DQqpO) presentations
+Red Gate Database for SQL in the City and [Bay Area Meetup](http://bit.ly/13DQqpO) presentations.
+You can also find a copy of the PowerPoint presentation in the root folder.
 
 
 * You can restore a copy of the RGDemo database in from the DatabaseBackup folder.
@@ -13,3 +14,4 @@ When creating this database locally, make sure you set the TRUSTWORTHY attribute
 
     ALTER DATABASE [RGDemo] SET TRUSTWORTHY ON
     GO
+
