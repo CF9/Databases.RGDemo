@@ -1,7 +1,7 @@
 Databases.RGDemo
 ================
 
-Red Gate Database for SQL in the City and [Bay Area Meetup](http://bit.ly/13DQqpO) presentations.
+Red Gate Database for SQL in the City and [Bay Area Meetup](http://bit.ly/11QTbi3) presentations.
 You can also find a copy of the PowerPoint presentation in the root folder.
 
 
