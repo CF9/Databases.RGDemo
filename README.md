@@ -6,7 +6,7 @@ You can also find a copy of the PowerPoint presentation in the root folder.
 
 I'm also experimenting with Prezi instead of PowerPoint.  Here's the Prezi deck:
 
-http://prezi.com/cgumux_thejg/sql-server-continuous-integration-using-jenkins-and-red-gate/
+http://bit.ly/10h72OE
 
 
 * You can restore a copy of the RGDemo database in from the DatabaseBackup folder.
