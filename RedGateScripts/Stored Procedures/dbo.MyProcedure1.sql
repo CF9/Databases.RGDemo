@@ -21,6 +21,6 @@ Purpose:	Just for kicks!
 
 */
 BEGIN
-	PRINT 'Hello, San Francisco - You should all see the movie 42 coming out on Friday -- It''s really great!!'
+	PRINT 'Hello, Mountain View!!'
 END
 GO
