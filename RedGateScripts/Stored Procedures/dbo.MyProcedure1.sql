@@ -21,6 +21,6 @@ Purpose:	Just for kicks!
 
 */
 BEGIN
-	PRINT 'Hello, Mountain View!!'
+	PRINT 'Hello, Mountain View!!  You guys are great!'
 END
 GO
