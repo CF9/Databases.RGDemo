@@ -41,3 +41,11 @@ Here are the steps that I took when creating my build server via Windows Azure:
     * RGDemo_QA
     * RGDemo_Prod
 * Create the folder C:\JenkinsPromotions\ and put the DeployDb.bat file in it.
+
+
+Create the Jenkins Build Job
+----------------------------
+
+Instead of writing out everything, below is a screenshot of the configuration for the Jenkins job.  I'll update this shortly.
+
+![Jenkins Screenshot](http://i.imgur.com/pjwGFKp.png "Jenkins Job Configuration Screenshot")
