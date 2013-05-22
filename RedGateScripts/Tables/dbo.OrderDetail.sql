@@ -4,7 +4,7 @@ CREATE TABLE [dbo].[OrderDetail]
 [Order_ID] [bigint] NOT NULL,
 [Item_ID] [bigint] NOT NULL,
 [Unit_At] [float] NOT NULL,
-[UnitPrice_Amount] [float] NOT NULL,
+[UnitPrice_AT] [float] NOT NULL,
 [IsActive_FL] [bit] NOT NULL CONSTRAINT [DF_OrderDetail_IsActive_FL] DEFAULT ((1)),
 [Create_DT] [datetime] NOT NULL CONSTRAINT [DF_OrderDetail_Create_DT] DEFAULT (getutcdate()),
 [Update_DT] [datetime] NULL,
