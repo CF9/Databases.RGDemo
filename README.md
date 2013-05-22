@@ -20,7 +20,6 @@ When creating this database locally, make sure you set the TRUSTWORTHY attribute
     ALTER DATABASE [RGDemo] SET TRUSTWORTHY ON
     GO
 
-
 Setting up your Continuous Integration Server
 ---------------------------------------------
 
