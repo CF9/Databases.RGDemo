@@ -32,8 +32,9 @@ Here are the steps that I took when creating my build server via Windows Azure:
     * Promoted Builds
     * Versioning
     * Copy Artifacts
-    * Git (Need to configure this to point to the bin folder) 
+    * GitHub (Need to configure this to point to the bin folder) 
 * Changed the Jenkins service to run under the local admin account (since SQL is using trusted connections)
+* Installed .NET Framework 4.0
 * Install MSBuild community tasks (I just unzipped the binaries and threw them in a folder called MSBuildCommunityTasks in the C:\Windows\Microsoft.NET\Framework64\v4x folder)
 * Open SSMS and create three empty databases:
     * RGDemo_Dev
