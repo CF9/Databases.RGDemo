@@ -48,4 +48,4 @@ Create the Jenkins Build Job
 
 Instead of writing out everything, below is a screenshot of the configuration for the Jenkins job.  I'll update the README.md file with the actual settings shortly.
 
-![Jenkins Screenshot](http://i.imgur.com/pjwGFKp.png "Jenkins Job Configuration Screenshot")
+![Jenkins Screenshot](http://i.imgur.com/XzMjaKv.png "Jenkins Job Configuration Screenshot")
