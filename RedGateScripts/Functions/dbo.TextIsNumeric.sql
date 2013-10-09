@@ -1,3 +1,4 @@
+
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
@@ -71,21 +72,7 @@ History:
 
 */
 
-	DECLARE	@returnValue	INT
-	
-	IF CHARINDEX('E', UPPER(@TextValue))<> 0
-	BEGIN
-		-- if there is 'E' in the value - do a standard IsNumeric test
-		SET @returnValue = IsNumeric(@TextValue)
-	END
-	ELSE
-	BEGIN
-		-- Otherwise do a modified IsNumeric test by adding 'E0' at the end
-		SET @returnValue = IsNumeric(@TextValue + 'E0')
-	END
-	
-	RETURN @returnValue
-
+	RETURN ISNUMERIC(@TextValue)
 
 END
 
