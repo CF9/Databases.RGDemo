@@ -7,7 +7,6 @@ You can also find a copy of the PowerPoint presentation in the root folder.
 I'm also experimenting with Prezi instead of PowerPoint.  Here's the Prezi deck:
 
 http://bit.ly/10h72OE
- 
 
 * You can restore a copy of the RGDemo database in from the DatabaseBackup folder.
 * You can also restore the same database as RGDemo_DEV, RGDemo_QA and RGDemo_PROD on your same machine
