@@ -21,6 +21,6 @@ Purpose:	Just for kicks!
 
 */
 BEGIN
-	PRINT 'Hello, SQL in the City Users in Pasadena!!  Go Dodgers!'
+	PRINT 'Hello, SQL in the City Users in Pasadena!!'
 END
 GO
